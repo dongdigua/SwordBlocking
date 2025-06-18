@@ -3,7 +3,8 @@
   "package": "eu.midnightdust.swordblocking.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "MixinPlayerEntityRenderer"
+    "MixinPlayerEntityRenderer",
+    "MixinHeldItemRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

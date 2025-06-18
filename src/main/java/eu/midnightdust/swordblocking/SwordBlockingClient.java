@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.ShieldItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.jetbrains.annotations.Nullable;
@@ -27,5 +28,9 @@ public class SwordBlockingClient implements ClientModInitializer {
                 });
             }
         }
+    }
+    public static boolean canWeaponBlock(LivingEntity entity) {
+        return (entity.getMainHandStack().getItem() instanceof SwordItem && entity.getOffHandStack().getItem() instanceof ShieldItem) ||
+            (entity.getOffHandStack().getItem() instanceof SwordItem && entity.getMainHandStack().getItem() instanceof ShieldItem);
     }
 }
