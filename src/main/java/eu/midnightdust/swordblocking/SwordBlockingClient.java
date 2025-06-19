@@ -30,7 +30,7 @@ public class SwordBlockingClient implements ClientModInitializer {
         }
     }
     public static boolean canWeaponBlock(LivingEntity entity) {
-        return (entity.getMainHandStack().getItem() instanceof SwordItem && entity.getOffHandStack().getItem() instanceof ShieldItem) ||
-            (entity.getOffHandStack().getItem() instanceof SwordItem && entity.getMainHandStack().getItem() instanceof ShieldItem);
+        return (entity.getMainHandStack().getItem() instanceof SwordItem &&
+                entity.getOffHandStack().getItem() instanceof ShieldItem);
     }
 }
